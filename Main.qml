@@ -127,7 +127,7 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-            color : "black" // shadows should always be black
+            color: "#80000000" // shadows should always be black
             Behavior on opacity {
                 OpacityAnimator {
                     duration: PlasmaCore.Units.veryLongDuration * 2
@@ -500,7 +500,7 @@ PlasmaCore.ColorScope {
             samples: 14
             spread: 0.3
             color : "black" // shadows should always be black
-            opacity: loginScreenRoot.uiVisible ? 0 : 0.6
+            opacity: loginScreenRoot.uiVisible ? 0 : 0.5
             Behavior on opacity {
                 // OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
