@@ -521,7 +521,7 @@ PlasmaCore.ColorScope {
             sourceSize.height: height
             opacity: loginScreenRoot.uiVisible ? 0 : 1
             fillMode: Image.PreserveAspectFit
-            height: Math.round(PlasmaCore.Units.gridUnit * 3.5)
+            height: Math.round(PlasmaCore.Units.gridUnit * 5)
             Behavior on opacity {
                 // OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
