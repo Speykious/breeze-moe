@@ -96,11 +96,11 @@ PlasmaCore.ColorScope {
             event.accepted = false;
         }
 
-        //takes one full minute for the ui to disappear
+        // takes 10 seconds for the ui to disappear
         Timer {
             id: fadeoutTimer
             running: true
-            interval: 60000
+            interval: 10000
             onTriggered: {
                 if (!loginScreenRoot.blockUI) {
                     loginScreenRoot.uiVisible = false;
