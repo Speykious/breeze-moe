@@ -139,7 +139,7 @@ Item {
         Transition {
             from: "off"
             to: "on"
-            //Note: can't use animators as they don't play well with parallelanimations
+            // Note: can't use animators as they don't play well with parallelanimations
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"

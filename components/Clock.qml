@@ -17,7 +17,7 @@ ColumnLayout {
         text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
         color: PlasmaCore.ColorScope.textColor
         style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" // no outline, doesn't matter
         font.pointSize: 48
         font.family: config.timeFont
         Layout.alignment: Qt.AlignHCenter
@@ -26,7 +26,7 @@ ColumnLayout {
         text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
         color: PlasmaCore.ColorScope.textColor
         style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" // no outline, doesn't matter
         font.pointSize: 24
         font.family: config.timeFont
         Layout.alignment: Qt.AlignHCenter

@@ -84,9 +84,9 @@ FocusScope {
         onUserSelected: root.userSelected()
     }
 
-    //goal is to show the prompts, in ~16 grid units high, then the action buttons
-    //but collapse the space between the prompts and actions if there's no room
-    //ui is constrained to 16 grid units wide, or the screen
+    // goal is to show the prompts, in ~16 grid units high, then the action buttons
+    // but collapse the space between the prompts and actions if there's no room
+    // ui is constrained to 16 grid units wide, or the screen
     ColumnLayout {
         id: prompts
         anchors.top: parent.verticalCenter
@@ -122,7 +122,7 @@ FocusScope {
             Layout.alignment: Qt.AlignHCenter
             implicitHeight: actionItemsLayout.implicitHeight
             implicitWidth: actionItemsLayout.implicitWidth
-            Row { //deliberately not rowlayout as I'm not trying to resize child items
+            Row { // deliberately not rowlayout as I'm not trying to resize child items
                 id: actionItemsLayout
                 anchors.verticalCenter: parent.top
                 spacing: PlasmaCore.Units.largeSpacing / 2

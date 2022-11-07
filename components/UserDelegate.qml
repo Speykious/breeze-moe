@@ -66,7 +66,7 @@ Item {
         width: isCurrent ? faceSize : faceSize - PlasmaCore.Units.largeSpacing
         height: width
 
-        //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
+        // Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
         Image {
             id: face
             source: wrapper.avatarPath
@@ -102,14 +102,14 @@ Item {
 
         readonly property color colorBorder: PlasmaCore.ColorScope.textColor
 
-        //draw a circle with an antialiased border
-        //innerRadius = size of the inner circle with contents
-        //outerRadius = size of the border
-        //blend = area to blend between two colours
-        //all sizes are normalised so 0.5 == half the width of the texture
+        // draw a circle with an antialiased border
+        // innerRadius = size of the inner circle with contents
+        // outerRadius = size of the border
+        // blend = area to blend between two colours
+        // all sizes are normalised so 0.5 == half the width of the texture
 
-        //if copying into another project don't forget to connect themeChanged to update()
-        //but in SDDM that's a bit pointless
+        // if copying into another project don't forget to connect themeChanged to update()
+        // but in SDDM that's a bit pointless
         fragmentShader: `
             varying highp vec2 qt_TexCoord0;
             uniform highp float qt_Opacity;
@@ -156,12 +156,12 @@ Item {
         width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
         style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" // no outline, doesn't matter
         wrapMode: Text.WordWrap
         maximumLineCount: wrapper.constrainText ? 3 : 1
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
-        //make an indication that this has active focus, this only happens when reached with keyboard navigation
+        // make an indication that this has active focus, this only happens when reached with keyboard navigation
         font.underline: wrapper.activeFocus
     }
 

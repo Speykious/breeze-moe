@@ -160,13 +160,13 @@ PlasmaCore.ColorScope {
             // finally expires, the next event should immediately set uiVisible = true again.
             hoverEnabled: loginScreenRoot.uiVisible ? undefined : false
 
-            focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
+            focus: true // StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
             Timer {
-                //SDDM has a bug in 0.13 where even though we set the focus on the right item within the window, the window doesn't have focus
-                //it is fixed in 6d5b36b28907b16280ff78995fef764bb0c573db which will be 0.14
-                //we need to call "window->activate()" *After* it's been shown. We can't control that in QML so we use a shoddy timer
-                //it's been this way for all Plasma 5.x without a huge problem
+                // SDDM has a bug in 0.13 where even though we set the focus on the right item within the window, the window doesn't have focus
+                // it is fixed in 6d5b36b28907b16280ff78995fef764bb0c573db which will be 0.14
+                // we need to call "window->activate()" *After* it's been shown. We can't control that in QML so we use a shoddy timer
+                // it's been this way for all Plasma 5.x without a huge problem
                 running: true
                 repeat: false
                 interval: 200
@@ -502,7 +502,7 @@ PlasmaCore.ColorScope {
             color : "black" // shadows should always be black
             opacity: loginScreenRoot.uiVisible ? 0 : 0.6
             Behavior on opacity {
-                //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
+                // OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
                 NumberAnimation {
                     duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
@@ -531,7 +531,7 @@ PlasmaCore.ColorScope {
             }
         }
 
-        //Footer
+        // Footer
         RowLayout {
             id: footer
             anchors {
@@ -596,9 +596,9 @@ PlasmaCore.ColorScope {
             rejectPasswordAnimation.start()
         }
         function onLoginSucceeded() {
-            //note SDDM will kill the greeter at some random point after this
-            //there is no certainty any transition will finish, it depends on the time it
-            //takes to complete the init
+            // note SDDM will kill the greeter at some random point after this
+            // there is no certainty any transition will finish, it depends on the time it
+            // takes to complete the init
             mainStack.opacity = 0
             footer.opacity = 0
         }

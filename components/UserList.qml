@@ -46,7 +46,7 @@ ListView {
     orientation: ListView.Horizontal
     highlightRangeMode: ListView.StrictlyEnforceRange
 
-    //centre align selected item (which implicitly centre aligns the rest
+    // centre align selected item (which implicitly centre aligns the rest
     preferredHighlightBegin: width/2 - userItemWidth/2
     preferredHighlightEnd: preferredHighlightBegin
 
@@ -91,7 +91,7 @@ ListView {
         width: userItemWidth
         height: userItemHeight
 
-        //if we only have one delegate, we don't need to clip the text as it won't be overlapping with anything
+        // if we only have one delegate, we don't need to clip the text as it won't be overlapping with anything
         constrainText: view.constrainText
 
         isCurrent: ListView.isCurrentItem

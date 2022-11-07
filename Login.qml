@@ -16,7 +16,7 @@ SessionManagementScreen {
     property string lastUserName
     property bool loginScreenUiVisible: false
 
-    //the y position that should be ensured visible when the on screen keyboard is visible
+    // the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
     onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + PlasmaCore.Units.smallSpacing
 
@@ -71,7 +71,7 @@ SessionManagementScreen {
 
         text: lastUserName
         visible: showUsernamePrompt
-        focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
+        focus: showUsernamePrompt && !lastUserName // if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
 
         onAccepted: {
@@ -107,8 +107,8 @@ SessionManagementScreen {
                 mainStack.currentItem.forceActiveFocus();
             }
 
-            //if empty and left or right is pressed change selection in user switch
-            //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
+            // if empty and left or right is pressed change selection in user switch
+            // this cannot be in keys.onLeftPressed as then it doesn't reach the password box
             Keys.onPressed: {
                 if (event.key === Qt.Key_Left && !text) {
                     userList.decrementCurrentIndex();
