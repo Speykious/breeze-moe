@@ -14,7 +14,7 @@ ColumnLayout {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     QQC2.Label {
-        text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+        text: Qt.formatTime(timeSource.data["Local"]["DateTime"], "hh:mm")
         color: PlasmaCore.ColorScope.textColor
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" // no outline, doesn't matter
@@ -23,7 +23,7 @@ ColumnLayout {
         Layout.alignment: Qt.AlignHCenter
     }
     QQC2.Label {
-        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], "ddd dd MMM yyyy")
         color: PlasmaCore.ColorScope.textColor
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" // no outline, doesn't matter
